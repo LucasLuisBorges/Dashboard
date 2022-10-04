@@ -12,12 +12,16 @@ import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import InputIcon from '@mui/icons-material/Input';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../hooks/useTheme';
 
 export function Sidebar() {
+  const { setDarkModeTheme, setLightModeTheme } = useTheme();
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">LucasB</span>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <span className="logo">LucasB</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
@@ -28,14 +32,18 @@ export function Sidebar() {
             <span>Dashboard</span>
           </li>
           <p className="title">LIST</p>
-          <li>
-            <PersonOutlineOutlinedIcon className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <StoreIcon className="icon" />
-            <span>Products</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: 'none' }}>
+            <li>
+              <PersonOutlineOutlinedIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: 'none' }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
           <li>
             <CreditCardIcon className="icon" />
             <span>Orders</span>
@@ -78,8 +86,8 @@ export function Sidebar() {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div className="colorOption" onClick={setLightModeTheme}></div>
+        <div className="colorOption" onClick={setDarkModeTheme}></div>
       </div>
     </div>
   );

@@ -3,13 +3,17 @@ import {
   SearchOutlined,
   LanguageOutlined,
   DarkModeOutlined,
+  LightModeOutlined,
   FullscreenExitOutlined,
   NotificationsNoneOutlined,
   ChatBubbleOutlineOutlined,
   ListOutlined,
 } from '@mui/icons-material';
+import { useTheme } from '../../hooks/useTheme';
+import { Theme } from '../../context/themeContext';
 
 export function Navbar() {
+  const { theme, toggleTheme } = useTheme();
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -22,8 +26,12 @@ export function Navbar() {
             <LanguageOutlined className="icon" />
             English
           </div>
-          <div className="item">
-            <DarkModeOutlined className="icon" />
+          <div className="item" onClick={toggleTheme}>
+            {theme === Theme.dark ? (
+              <DarkModeOutlined className="icon" />
+            ) : (
+              <LightModeOutlined className="icon" />
+            )}
           </div>
           <div className="item">
             <FullscreenExitOutlined className="icon" />
