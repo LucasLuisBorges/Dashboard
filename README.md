@@ -1,6 +1,13 @@
 # Dashboard
 
-
+<img src="https://github.com/LucasLuisBorges/Dashboard/blob/master/assets/readme/1.jpg" width="100%">
+<img src="https://github.com/LucasLuisBorges/Dashboard/blob/master/assets/readme/2.jpg" width="100%">
+<img src="https://github.com/LucasLuisBorges/Dashboard/blob/master/assets/readme/3.jpg" width="100%">
+<img src="https://github.com/LucasLuisBorges/Dashboard/blob/master/assets/readme/4.jpg" width="100%">
+<img src="https://github.com/LucasLuisBorges/Dashboard/blob/master/assets/readme/5.jpg" width="100%">
+<img src="https://github.com/LucasLuisBorges/Dashboard/blob/master/assets/readme/6.jpg" width="100%">
+<img src="https://github.com/LucasLuisBorges/Dashboard/blob/master/assets/readme/7.jpg" width="100%">
+<img src="https://github.com/LucasLuisBorges/Dashboard/blob/master/assets/readme/8.jpg" width="100%">
 
 ## This project
 This project was created to simulate a dashboard
