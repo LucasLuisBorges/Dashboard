@@ -1,13 +1,17 @@
 import { DataTable, Navbar, Sidebar } from '../../components';
 import './list.scss';
 
-export function List() {
+interface IDataProps {
+  title: string;
+}
+
+export function List({ title }: IDataProps) {
   return (
     <div className="list">
       <Sidebar />
       <div className="listContainer">
         <Navbar />
-        <DataTable />
+        <DataTable title={title} />
       </div>
     </div>
   );

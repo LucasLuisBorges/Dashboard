@@ -3,7 +3,11 @@ import { DataGrid } from '@mui/x-data-grid';
 import { userColumns, userRows } from '../../data/dataTable';
 import { Link } from 'react-router-dom';
 
-export function DataTable() {
+interface IDataTableProps {
+  title: string;
+}
+
+export function DataTable({ title }: IDataTableProps) {
   const actionColumn = [
     {
       field: 'action',
@@ -24,7 +28,7 @@ export function DataTable() {
   return (
     <div className="dataTable">
       <div className="dataTableTitle">
-        Add New User
+        {title}
         <Link to="/users/new" className="link">
           Add New
         </Link>

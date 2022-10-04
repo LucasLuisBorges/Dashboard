@@ -9,7 +9,7 @@ export function Router() {
         <Route index element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="users">
-          <Route index element={<List />} />
+          <Route index element={<List title="Add New User" />} />
           <Route path=":userId" element={<Single />} />
           <Route
             path="new"
@@ -17,7 +17,7 @@ export function Router() {
           />
         </Route>
         <Route path="products">
-          <Route index element={<List />} />
+          <Route index element={<List title="Add New Product" />} />
           <Route path=":productId" element={<Single />} />
           <Route
             path="new"
